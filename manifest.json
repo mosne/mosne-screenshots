@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "16:9 WebP Screenshotter",
+  "version": "1.0",
+  "description": "Captures a 16:9 WebP screenshot of the current tab with a sanitized filename.",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "downloads",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>16:9 WebP Screenshotter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="glass-card">
+    <header class="app-header">
+      <h1 class="app-title">16:9 Screenshot</h1>
+      <span class="badge">WebP</span>
+    </header>
+
+    <main class="app-main">
+      <!-- Preview area -->
+      <div class="preview-container">
+        <div id="loading" class="spinner-container">
+          <div class="spinner"></div>
+          <p class="status-text">Capturing visible tab...</p>
+        </div>
+        <img id="screenshot-preview" class="preview-image hidden" alt="Screenshot preview">
+      </div>
+
+      <!-- Metadata / Filename info -->
+      <div class="metadata-container">
+        <label for="filename-input" class="label-text">Filename Preview</label>
+        <div class="input-wrapper">
+          <input type="text" id="filename-input" class="filename-input" readonly>
+          <span class="file-ext">.webp</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <button id="download-btn" class="btn btn-primary" disabled>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+        Save WebP Image
+      </button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
